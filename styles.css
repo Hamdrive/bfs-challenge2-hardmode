@@ -29,33 +29,33 @@
     margin: 0 auto;
 }
 
-.gen-new-img{
+.voting-buttons{
     margin: 30px 0 10px 0;
     width: 100%;
     height: 50px;
     position: relative;
 }
 
-.gen-new-img .refresh-btn{
-    width: 200px;
-    height: 50px;
+.voting-buttons .vote-btns-position{
+    width: 404px;
     margin: 0 auto;
 }
 
-.glow-on-hover {
-    width: 220px;
+.voting-buttons #green-btn{
+    width: 200px;
     height: 50px;
+    margin: 0 auto;
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: green;
     cursor: pointer;
     position: relative;
     z-index: 0;
     border-radius: 10px;
 }
 
-.glow-on-hover:before {
+.voting-buttons #green-btn:before{
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -72,29 +72,86 @@
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.voting-buttons #green-btn:active {
     color: #000
 }
 
-.glow-on-hover:active:after {
+.voting-buttons #green-btn:active:after {
     background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.voting-buttons #green-btn:hover:before {
     opacity: 1;
 }
 
-.glow-on-hover:after {
+.voting-buttons #green-btn:after {
     z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: green;
     left: 0;
     top: 0;
     border-radius: 10px;
 }
+
+.voting-buttons #red-btn{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: red;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.voting-buttons #red-btn:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.voting-buttons #red-btn:active {
+    color: #000
+}
+
+.voting-buttons #red-btn:active:after {
+    background: transparent;
+}
+
+.voting-buttons #red-btn:hover:before {
+    opacity: 1;
+}
+
+.voting-buttons #red-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
 
 @keyframes glowing {
     0% { background-position: 0 0; }
